@@ -15,7 +15,6 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static quimioInfo.Quimioinformatica.igualadorOrdn;
-import static quimioInfo.Quimioinformatica.inputToMolecula;
 
 public class gui extends javax.swing.JFrame {
 
@@ -86,7 +85,6 @@ public class gui extends javax.swing.JFrame {
 
         jButton1.setText("jButton1");
 
-        
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -144,7 +142,7 @@ public class gui extends javax.swing.JFrame {
         });
         jTextField1.setFont(new Font("Arial", Font.PLAIN,20));
 
-        jLabel1.setText("<html><font size=\"6\">Introduzca formula molecular:</font>");
+        jLabel1.setText("<html><font size=\"6\">Introduzca fÃ³rmula molecular:</font>");
 
         jLabel2.setText("<html><font size=\"5\">Resultado:</font>");
 
@@ -223,7 +221,7 @@ public class gui extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Entender formula química", jPanel1);
+        jTabbedPane1.addTab("Entender formula quÃ­mica", jPanel1);
 
         jTextField3.setText(" H2");
         jTextField3.setFont(new Font("Arial", Font.PLAIN,20));
@@ -231,7 +229,7 @@ public class gui extends javax.swing.JFrame {
         jTextField5.setText(" O2");
         jTextField5.setFont(new Font("Arial", Font.PLAIN,20));
 
-        jLabel3.setText("<html><font size=\"18\">?</font>");
+        jLabel3.setText("<html><font size=\"18\">â†’</font>");
 
         jTextField7.setText(" H2O");
         jTextField7.setFont(new Font("Arial", Font.PLAIN,20));
@@ -242,7 +240,7 @@ public class gui extends javax.swing.JFrame {
 
         jTextField9.setFont(new Font("Arial", Font.PLAIN,20));
 
-        jLabel6.setText("<html><font size=\"12\">Reacción:</font>");
+        jLabel6.setText("<html><font size=\"12\">ReacciÃ³n:</font>");
 
         jButton4.setText("<html><font size=\"6\">Igualar</font>");
         jButton4.setActionCommand("<html><font size=\"10\">Igualar</font>");
@@ -356,6 +354,8 @@ public class gui extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel3.getAccessibleContext().setAccessibleName("<html><font size=\"18\">â†’</font>");
+
         jTabbedPane1.addTab("Igualador de reacciones", O2);
 
         jTextArea3.setColumns(20);
@@ -377,7 +377,7 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setText("Tamaño:");
+        jLabel7.setText("Tamanio:");
 
         jSlider2.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -403,7 +403,7 @@ public class gui extends javax.swing.JFrame {
                 .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                 .addComponent(jButton9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton8)
@@ -456,6 +456,8 @@ public class gui extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jTabbedPane1.getAccessibleContext().setAccessibleName("Entender formula quimica");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -475,10 +477,10 @@ public class gui extends javax.swing.JFrame {
         String sc = jTextField7.getText().replaceAll("[^a-zA-Z0-9()]", "");
         String sd = jTextField9.getText().replaceAll("[^a-zA-Z0-9()]", "");
 
-        molecula a = inputToMolecula(sa);
-        molecula b = inputToMolecula(sb);
-        molecula c = inputToMolecula(sc);
-        molecula d = inputToMolecula(sd);
+        Molecula a = new Molecula(sa);
+        Molecula b = new Molecula(sb);
+        Molecula c = new Molecula(sc);
+        Molecula d = new Molecula(sd);
 
         int[] igual = igualadorOrdn(a, b, c, d);
 
@@ -544,7 +546,7 @@ public class gui extends javax.swing.JFrame {
 
         String in = jTextField1.getText().replaceAll("[^a-zA-Z0-9()]", "");
 
-        molecula nueva = inputToMolecula(in);
+        Molecula nueva = new Molecula(in);
 
         String resultado = nueva.printEveryAtom();
 
@@ -564,10 +566,10 @@ public class gui extends javax.swing.JFrame {
         String sc = jTextField7.getText().replaceAll("[^a-zA-Z0-9()]", "");
         String sd = jTextField9.getText().replaceAll("[^a-zA-Z0-9()]", "");
 
-        molecula a = inputToMolecula(sa);
-        molecula b = inputToMolecula(sb);
-        molecula c = inputToMolecula(sc);
-        molecula d = inputToMolecula(sd);
+        Molecula a = new Molecula(sa);
+        Molecula b = new Molecula(sb);
+        Molecula c = new Molecula(sc);
+        Molecula d = new Molecula(sd);
 
         int[] igual = igualadorOrdn(a, b, c, d);
 
