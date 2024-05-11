@@ -12,5 +12,5 @@ Gracias a Julio, mi profesor de química en 6to de liceo, por exhortarme a dedic
 
 ![gif con las diferentes pantallas de la app](https://github.com/agustin-recoba/quimioInfo/blob/main/README%20media/showcase%20animation.gif?raw=true)
 
-## TO DO:
-El algoritmo de igualación de reacciones funciona por fuerza bruta: prueba todas las combinaciones hasta encontrar una que satisfazca la igualdad. Puede optimizarse utilizando ecuaciones lineales de variable entera.
+# Comentario:
+Dejo público el repo por cariño a lo que fue mi primer proyecto de desarrollo de software.
